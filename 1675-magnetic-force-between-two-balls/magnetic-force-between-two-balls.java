@@ -1,20 +1,4 @@
 class Solution {
-    public boolean ispossible(int[] position,int mid,int m)
-    {
-        int ball=1;
-        int pos=position[0];
-        for(int i=1;i<position.length;i++)
-        {
-            if(position[i]-pos>=mid)
-            {
-                ball++;
-                pos=position[i];
-            }
-            if(ball==m)
-            return true;
-        }
-        return false;
-    }
     public int maxDistance(int[] position, int m) {
         int n=position.length;
         Arrays.sort(position);
@@ -32,5 +16,21 @@ class Solution {
             e=mid-1;
         }
         return ans;
+    }
+    public boolean ispossible(int[] position,int mid,int m)
+    {
+        int ball=1;
+        int pos=position[0];
+        for(int i=1;i<position.length;i++)
+        {
+            if(position[i]-pos>=mid)
+            {
+                ball++;
+                pos=position[i];
+            }
+            if(ball==m)
+            return true;
+        }
+        return false;
     }
 }
