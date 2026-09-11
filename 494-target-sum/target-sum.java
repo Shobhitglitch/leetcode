@@ -9,9 +9,9 @@ class Solution {
                 return 0;
         }
         
-        int plus=solve(nums,target,i+1,sum-nums[i]);
+        int plus=solve(nums,target,i+1,sum+nums[i]);
 
-        int minus=solve(nums,target,i+1,sum+nums[i]);
+        int minus=solve(nums,target,i+1,sum-nums[i]);
         return plus+minus;
     }
     public int findTargetSumWays(int[] nums, int target) {
